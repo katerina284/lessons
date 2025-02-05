@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ηλικίες μιας εξαμελούς οικογένειας</title>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h2, h3 {
+            color: #333;
+        }
+        .story {
+            font-size: 18px;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>📖 Μια ιστορία με αριθμούς</h2>
+        <p class="story">
+            Στη  γειτονιά της Κυψέλης ζει η οικογένεια Παπαδόπουλου. Είναι μια εξαμελής οικογένεια 
+            με μέλη διαφορετικών ηλικιών. Η μικρή Άννα για μια σχολική εργασία αποφασίζει να βρει 
+            ποια είναι η μέση ηλικία της οικογένειάς της.  
+            <br><br> 
+            Έτσι, ρωτάει κάθε μέλος της οικογένειας την ηλικία του και καταγράφει τα εξής δεδομένα:  
+            <b>10, 15, 17, 20, 50, 60</b> χρόνια.
+            <br><br>
+            Βοήθησε τον Γιώργο να υπολογίσει τα μέτρα θέσης και διασποράς! 🔢
+        </p>
+
+        <button class="btn" onclick="showCalculations()">👉 Προχωράμε στους υπολογισμούς!</button>
+
+        <div id="calculations" class="hidden">
+            <h3>📌 Υπολογίζουμε τα Μέτρα Θέσης και Διασποράς</h3>
+
+            <h3>Μέση Τιμή (Mean)</h3>
+            <p>Η μέση ηλικία της οικογένειας υπολογίζεται ως:</p>
+            <p class="formula">\[
+            \bar{x} = \frac{10 + 15 + 17 + 20 + 50 + 60}{6} = 28.67
+            \]</p>
+
+            <h3>Διάμεσος (Median)</h3>
+            <p>Η διάμεσος είναι η μέση τιμή των δύο κεντρικών αριθμών:</p>
+            <p class="formula">\[
+            \tilde{x} = \frac{17 + 20}{2} = 18.5
+            \]</p>
+
+            <h3>Διακύμανση (Variance) και Τυπική Απόκλιση (Standard Deviation)</h3>
+            <p>Υπολογίζουμε τη διακύμανση και την τυπική απόκλιση για να δούμε πόσο απλώνονται οι τιμές γύρω από τη μέση τιμή.</p>
+
+            <h4>Διακύμανση (Variance)</h4>
+            <p class="formula">\[
+            \sigma^2 = \frac{(10-28.67)^2 + (15-28.67)^2 + (17-28.67)^2 + (20-28.67)^2 + (50-28.67)^2 + (60-28.67)^2}{6}
+            \]</p>
+            <p class="formula">\[
+            \sigma^2 = \frac{(353.44 + 188.34 + 138.23 + 75.23 + 444.34 + 977.78)}{6} = 362.23
+            \]</p>
+
+            <h4>Τυπική Απόκλιση (Standard Deviation)</h4>
+            <p class="formula">\[
+            \sigma = \sqrt{362.23} = 19.04
+            \]</p>
+        </div>
+    </div>
+
+    <script>
+        function showCalculations() {
+            document.getElementById("calculations").classList.remove("hidden");
+        }
+    </script>
+
+</body>
+</html>
